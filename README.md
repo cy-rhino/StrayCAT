@@ -1,0 +1,2 @@
+# StrayCAT
+ EtherCAT Slave board
