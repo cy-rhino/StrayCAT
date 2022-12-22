@@ -1,5 +1,5 @@
 # StrayCAT
- EtherCAT Slave board
+ EtherCAT Slave board using LAN9252
 
 ![Image](img/StrayCAT_PCB.png)
 
