@@ -1,0 +1,11 @@
+C:\Users\user\OneDrive\StrayCAT\Application\bin\Release\StrayCAT_ESI_Tool.exe.config
+C:\Users\user\OneDrive\StrayCAT\Application\bin\Release\StrayCAT_ESI_Tool.exe
+C:\Users\user\OneDrive\StrayCAT\Application\bin\Release\StrayCAT_ESI_Tool.pdb
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT ESI Tool.vbproj.AssemblyReference.cache
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT ESI Tool.vbproj.SuggestedBindingRedirects.cache
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT.Form1.resources
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT.Resources.resources
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT ESI Tool.vbproj.GenerateResource.cache
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT ESI Tool.vbproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT_ESI_Tool.exe
+C:\Users\user\OneDrive\StrayCAT\Application\obj\Release\StrayCAT_ESI_Tool.pdb
