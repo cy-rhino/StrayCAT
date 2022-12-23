@@ -8,3 +8,13 @@ This PCB data is designed to be ordered from PCBGOGO.
 | Min Track/Spacing | 5/5mil      |
 | Min Hole Size     | 0.3mm       |
 | Finished Copper   | 1oz. Cu     |
+
+The order of the layers is as follows.
+| Layer | Filename     | Usage  |
+|:------|:-------------|:-------|
+| L1    | StrayCAT.GTL | Top    |
+| L2    | StrayCAT.G1  | GND    |
+| L3    | StrayCAT.G2  | 3.3V   |
+| L4    | StrayCAT.GBL | Bottom |
+
+GKO layer assigns the board outline.
