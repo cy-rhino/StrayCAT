@@ -58,6 +58,7 @@ Generating : Layer 1
 Used DCodes :
     D28
     D31
+    D34
     D35
     D39
     D40
@@ -76,6 +77,7 @@ Generating : Layer 2
 Used DCodes :
     D27
     D28
+    D34
     D35
     D37
     D39
