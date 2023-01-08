@@ -3,7 +3,7 @@
 ![Image](../img/StrayCAT_PCB.png)
 
 ### PCB Order Information
-This PCB data is designed to be ordered from PCBGOGO.
+This PCB data is designed to be ordered from PCBGOGO. The GTP layer allows simultaneous production of paste mask.
 | Item              | Value       |
 |:------------------|:------------|
 | Size              | 85mm * 56mm |
