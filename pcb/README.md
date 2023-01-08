@@ -1,3 +1,7 @@
+### PCB Layout
+
+![Image](../img/StrayCAT_PCB.png)
+
 ### PCB Order Information
 This PCB data is designed to be ordered from PCBGOGO.
 | Item              | Value       |
