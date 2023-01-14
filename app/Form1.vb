@@ -9,8 +9,10 @@
 '
 
 Public Class Form1
+    Private typeTable As New DataTable("typeTable")
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim typeTable As New DataTable("typeTable")
+
         typeTable.Columns.Add("Display", GetType(String))
         typeTable.Columns.Add("Value", GetType(Integer))
         typeTable.Rows.Add("uint8_t", 0)
@@ -23,7 +25,6 @@ Public Class Form1
         typeTable.Rows.Add("int64_t", 7)
         typeTable.Rows.Add("float", 8)
         typeTable.Rows.Add("double", 9)
-        typeTable.Rows.Add("bool", 10)
 
         DataGridView_In.ColumnCount = 1
         DataGridView_In.RowCount = 16
@@ -104,6 +105,10 @@ Public Class Form1
     End Sub
 
     Private Sub Button_Save_Click(sender As Object, e As EventArgs) Handles Button_Save.Click
+
+        Dim CUST_BYTE_NUM_OUT As Integer = 0
+        Dim CUST_BYTE_NUM_IN As Integer = 0
+
         Dim swIniFile As New System.IO.StreamWriter("StrayCAT_ESI_Tool.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
         swIniFile.WriteLine(TextBox_Vendor_ID.Text)
         swIniFile.WriteLine(TextBox_Vendor_Name.Text)
@@ -195,6 +200,7 @@ Public Class Form1
                 If DataGridView_Out.Rows(i).Cells(0).Value = 0 Or
                    DataGridView_Out.Rows(i).Cells(0).Value = 4 Then
                     swXmlFile.WriteLine("                       <BitLen>8</BitLen>")
+                    CUST_BYTE_NUM_OUT += 1
                     If DataGridView_Out.Rows(i).Cells(0).Value = 0 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>USINT</DataType>")
@@ -205,6 +211,7 @@ Public Class Form1
                 ElseIf DataGridView_Out.Rows(i).Cells(0).Value = 1 Or
                        DataGridView_Out.Rows(i).Cells(0).Value = 5 Then
                     swXmlFile.WriteLine("                       <BitLen>16</BitLen>")
+                    CUST_BYTE_NUM_OUT += 2
                     If DataGridView_Out.Rows(i).Cells(0).Value = 1 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>UINT</DataType>")
@@ -216,6 +223,7 @@ Public Class Form1
                        DataGridView_Out.Rows(i).Cells(0).Value = 6 Or
                        DataGridView_Out.Rows(i).Cells(0).Value = 8 Then
                     swXmlFile.WriteLine("                       <BitLen>32</BitLen>")
+                    CUST_BYTE_NUM_OUT += 4
                     If DataGridView_Out.Rows(i).Cells(0).Value = 2 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>UDINT</DataType>")
@@ -230,6 +238,7 @@ Public Class Form1
                        DataGridView_Out.Rows(i).Cells(0).Value = 7 Or
                        DataGridView_Out.Rows(i).Cells(0).Value = 9 Then
                     swXmlFile.WriteLine("                       <BitLen>64</BitLen>")
+                    CUST_BYTE_NUM_OUT += 8
                     If DataGridView_Out.Rows(i).Cells(0).Value = 3 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>ULINT</DataType>")
@@ -240,10 +249,6 @@ Public Class Form1
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>LREAL</DataType>")
                     End If
-                ElseIf DataGridView_Out.Rows(i).Cells(0).Value = 10 Then
-                    swXmlFile.WriteLine("                       <BitLen>1</BitLen>")
-                    swXmlFile.WriteLine("                       <Name>" + DataGridView_Out.Rows(i).Cells(1).Value + "</Name>")
-                    swXmlFile.WriteLine("                       <DataType>BOOL</DataType>")
                 End If
                 swXmlFile.WriteLine("                   </Entry>")
             End If
@@ -264,6 +269,7 @@ Public Class Form1
                 If DataGridView_In.Rows(i).Cells(0).Value = 0 Or
                    DataGridView_In.Rows(i).Cells(0).Value = 4 Then
                     swXmlFile.WriteLine("                       <BitLen>8</BitLen>")
+                    CUST_BYTE_NUM_IN += 1
                     If DataGridView_In.Rows(i).Cells(0).Value = 0 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>USINT</DataType>")
@@ -274,6 +280,7 @@ Public Class Form1
                 ElseIf DataGridView_In.Rows(i).Cells(0).Value = 1 Or
                        DataGridView_In.Rows(i).Cells(0).Value = 5 Then
                     swXmlFile.WriteLine("                       <BitLen>16</BitLen>")
+                    CUST_BYTE_NUM_IN += 2
                     If DataGridView_In.Rows(i).Cells(0).Value = 1 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>UINT</DataType>")
@@ -285,6 +292,7 @@ Public Class Form1
                        DataGridView_In.Rows(i).Cells(0).Value = 6 Or
                        DataGridView_In.Rows(i).Cells(0).Value = 8 Then
                     swXmlFile.WriteLine("                       <BitLen>32</BitLen>")
+                    CUST_BYTE_NUM_IN += 4
                     If DataGridView_In.Rows(i).Cells(0).Value = 2 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>UDINT</DataType>")
@@ -299,6 +307,7 @@ Public Class Form1
                        DataGridView_In.Rows(i).Cells(0).Value = 7 Or
                        DataGridView_In.Rows(i).Cells(0).Value = 9 Then
                     swXmlFile.WriteLine("                       <BitLen>64</BitLen>")
+                    CUST_BYTE_NUM_IN += 8
                     If DataGridView_In.Rows(i).Cells(0).Value = 3 Then
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>ULINT</DataType>")
@@ -309,10 +318,6 @@ Public Class Form1
                         swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
                         swXmlFile.WriteLine("                       <DataType>LREAL</DataType>")
                     End If
-                ElseIf DataGridView_In.Rows(i).Cells(0).Value = 10 Then
-                    swXmlFile.WriteLine("                       <BitLen>1</BitLen>")
-                    swXmlFile.WriteLine("                       <Name>" + DataGridView_In.Rows(i).Cells(1).Value + "</Name>")
-                    swXmlFile.WriteLine("                       <DataType>BOOL</DataType>")
                 End If
                 swXmlFile.WriteLine("                   </Entry>")
             End If
@@ -341,7 +346,7 @@ Public Class Form1
         swXmlFile.WriteLine("           </Device>")
         swXmlFile.WriteLine("       </Devices>")
         swXmlFile.WriteLine("   </Descriptions>")
-        swXmlFile.WriteLine("</EtherCATInfo>")
+        swXmlFile.Write("</EtherCATInfo>")
         swXmlFile.Close()
 
         Dim swVImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Vendor_Image.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
@@ -351,6 +356,57 @@ Public Class Form1
         Dim swGImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Group_Image.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
         swGImgFile.WriteLine(TextBox_Group_Image.Text)
         swGImgFile.Close()
+
+        Dim swHeaderFile As New System.IO.StreamWriter("StrayCAT_Custom.h", False, System.Text.Encoding.GetEncoding("shift-jis"))
+        swHeaderFile.WriteLine("/*")
+        swHeaderFile.WriteLine(" *  Header file for EasyCAT library")
+        swHeaderFile.WriteLine(" *")
+        swHeaderFile.WriteLine(" *  This file has been created by the StrayCAT ESI Tool.")
+        swHeaderFile.WriteLine(" */")
+        swHeaderFile.WriteLine("")
+        swHeaderFile.WriteLine("#ifndef CUSTOM_PDO_NAME_H")
+        swHeaderFile.WriteLine("#define CUSTOM_PDO_NAME_H")
+        swHeaderFile.WriteLine("")
+        swHeaderFile.WriteLine("#define CUST_BYTE_NUM_OUT " + CUST_BYTE_NUM_OUT.ToString)
+        swHeaderFile.WriteLine("#define CUST_BYTE_NUM_IN  " + CUST_BYTE_NUM_IN.ToString)
+        swHeaderFile.WriteLine("#define TOT_BYTE_NUM_ROUND_OUT " + (Math.Ceiling(CUST_BYTE_NUM_OUT / 4) * 4).ToString)
+        swHeaderFile.WriteLine("#define TOT_BYTE_NUM_ROUND_IN  " + (Math.Ceiling(CUST_BYTE_NUM_IN / 4) * 4).ToString)
+        swHeaderFile.WriteLine("")
+        swHeaderFile.WriteLine("// output buffer")
+        swHeaderFile.WriteLine("typedef union")
+        swHeaderFile.WriteLine("{")
+        swHeaderFile.WriteLine("  uint8_t Byte [TOT_BYTE_NUM_ROUND_OUT];")
+        swHeaderFile.WriteLine("  struct")
+        swHeaderFile.WriteLine("  {")
+        For i As Integer = 0 To DataGridView_Out.Rows.Count - 2
+            If DataGridView_Out.Rows(i).Cells(0).Value Is Nothing Or
+               DataGridView_Out.Rows(i).Cells(1).Value Is Nothing Then
+            Else
+                swHeaderFile.WriteLine("    " + typeTable.Rows(DataGridView_Out.Rows(i).Cells(0).Value)(0) + " " + DataGridView_Out.Rows(i).Cells(1).Value + ";")
+            End If
+        Next
+        swHeaderFile.WriteLine("  } Cust;")
+        swHeaderFile.WriteLine("} PROCBUFFER_OUT;")
+        swHeaderFile.WriteLine("")
+        swHeaderFile.WriteLine("// input buffer")
+        swHeaderFile.WriteLine("typedef union")
+        swHeaderFile.WriteLine("{")
+        swHeaderFile.WriteLine("  uint8_t Byte [TOT_BYTE_NUM_ROUND_IN];")
+        swHeaderFile.WriteLine("  struct")
+        swHeaderFile.WriteLine("  {")
+        For i As Integer = 0 To DataGridView_In.Rows.Count - 2
+            If DataGridView_In.Rows(i).Cells(0).Value Is Nothing Or
+               DataGridView_In.Rows(i).Cells(1).Value Is Nothing Then
+            Else
+                swHeaderFile.WriteLine("    " + typeTable.Rows(DataGridView_In.Rows(i).Cells(0).Value)(0) + " " + DataGridView_In.Rows(i).Cells(1).Value + ";")
+            End If
+        Next
+        swHeaderFile.WriteLine("  } Cust;")
+        swHeaderFile.WriteLine("} PROCBUFFER_IN;")
+        swHeaderFile.WriteLine("")
+        swHeaderFile.Write("#endif")
+        swHeaderFile.Close()
+
     End Sub
 
     Private Sub Button_PDO_In_Clear_Click(sender As Object, e As EventArgs) Handles Button_PDO_In_Clear.Click

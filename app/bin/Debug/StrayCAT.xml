@@ -49,7 +49,7 @@
                        <Index>#x7000</Index>
                        <SubIndex>1</SubIndex>
                        <BitLen>8</BitLen>
-                       <Name>outputVal1</Name>
+                       <Name>Leds</Name>
                        <DataType>USINT</DataType>
                    </Entry>
                </RxPdo>
@@ -60,8 +60,36 @@
                    <Entry>
                        <Index>#x6000</Index>
                        <SubIndex>1</SubIndex>
+                       <BitLen>16</BitLen>
+                       <Name>Analog_0</Name>
+                       <DataType>UINT</DataType>
+                   </Entry>
+                   <Entry>
+                       <Index>#x6000</Index>
+                       <SubIndex>2</SubIndex>
+                       <BitLen>16</BitLen>
+                       <Name>Analog_1</Name>
+                       <DataType>UINT</DataType>
+                   </Entry>
+                   <Entry>
+                       <Index>#x6000</Index>
+                       <SubIndex>3</SubIndex>
+                       <BitLen>16</BitLen>
+                       <Name>Bit16_RisingRamp</Name>
+                       <DataType>UINT</DataType>
+                   </Entry>
+                   <Entry>
+                       <Index>#x6000</Index>
+                       <SubIndex>4</SubIndex>
                        <BitLen>8</BitLen>
-                       <Name>inputVal1</Name>
+                       <Name>DipSwitches</Name>
+                       <DataType>USINT</DataType>
+                   </Entry>
+                   <Entry>
+                       <Index>#x6000</Index>
+                       <SubIndex>5</SubIndex>
+                       <BitLen>8</BitLen>
+                       <Name>Bit8_FallingRamp</Name>
                        <DataType>USINT</DataType>
                    </Entry>
                </TxPdo>
@@ -83,7 +111,7 @@
                <!-- EEPROM -->
                <Eeprom>
                    <ByteSize>2048</ByteSize>
-                   <ConfigData>800E00CC8813f000000000800000</ConfigData>
+                   <ConfigData>8003006EFF00FF000000</ConfigData>
                </Eeprom>
            </Device>
        </Devices>
