@@ -3,7 +3,7 @@
 ![Image](../img/StrayCAT_PCB.png)
 
 ### PCB Order Information
-This PCB data is designed to be ordered from PCBGOGO. The GTP layer allows simultaneous production of paste mask.
+
 | Item              | Value       |
 |:------------------|:------------|
 | Size              | 85mm * 56mm |
@@ -13,7 +13,8 @@ This PCB data is designed to be ordered from PCBGOGO. The GTP layer allows simul
 | Min Hole Size     | 0.3mm       |
 | Finished Copper   | 1oz. Cu     |
 
-The order of the layers is as follows.
+The order of the layers are as follows.
+
 | Layer | Filename     | Usage  |
 |:------|:-------------|:-------|
 | L1    | StrayCAT.GTL | Top    |
@@ -21,4 +22,16 @@ The order of the layers is as follows.
 | L3    | StrayCAT.G2  | 3.3V   |
 | L4    | StrayCAT.GBL | Bottom |
 
-GKO layer assigns the board outline.
+- GTP layer allows simultaneous production of paste mask.
+- GKO layer assigns the board outline.
+- TXT file assigns the NC drill data.
+
+This Gerber data is impedance-matched based on the assumption that the order will be placed with a factory that manufactures the following board specifications.
+
+| Item                | Value              |
+|:--------------------|:-------------------|
+|Trace Thickness      | 0.035mm(1.378mil) |
+|Dielectric Thickness | 0.175mm(6.89mil)  |
+|Dielectric Constant  | 4.29               |
+
+The trace width of the MDI transmission line is 6.929mil and the trace spacing is adjusted to 5.41mil so that the differential impedance is 100 ohms.
