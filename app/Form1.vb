@@ -406,7 +406,6 @@ Public Class Form1
         swHeaderFile.WriteLine("")
         swHeaderFile.Write("#endif")
         swHeaderFile.Close()
-
     End Sub
 
     Private Sub Button_PDO_In_Clear_Click(sender As Object, e As EventArgs) Handles Button_PDO_In_Clear.Click
