@@ -26,12 +26,14 @@ The order of the layers are as follows.
 - GKO layer assigns the board outline.
 - TXT file assigns the NC drill data.
 
+### Layer Stack-up 
+
 This Gerber data is impedance-matched based on the assumption that the order will be placed with a factory that manufactures the following board specifications.
 
 | Item                | Value              |
 |:--------------------|:-------------------|
-|Trace Thickness      | 0.035mm(1.378mil) |
-|Dielectric Thickness | 0.175mm(6.89mil)  |
+|Trace Thickness      | 0.035mm(1.378mil)  |
+|Dielectric Thickness | 0.175mm(6.89mil)   |
 |Dielectric Constant  | 4.29               |
 
 The trace width of the MDI transmission line is 6.929mil and the trace spacing is adjusted to 5.41mil so that the differential impedance is 100 ohms.
