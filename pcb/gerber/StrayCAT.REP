@@ -56,12 +56,12 @@ Generating : Layer 1
 
 
 Used DCodes :
-    D29
+    D28
     D31
     D34
     D35
-    D37
-    D38
+    D39
+    D40
     D42
 *************************************************************
 
@@ -76,11 +76,11 @@ Generating : Layer 2
 
 Used DCodes :
     D27
-    D29
+    D28
     D34
     D35
     D37
-    D38
+    D39
     D40
     D42
 *************************************************************
@@ -96,8 +96,8 @@ Generating : Bottom Layer
 
 Used DCodes :
     D27
+    D30
     D31
-    D32
     D34
     D35
     D36
@@ -138,7 +138,7 @@ Generating : Top Paste
 
 
 Used DCodes :
-    D26
+    D12
     D50
     D51
     D52
