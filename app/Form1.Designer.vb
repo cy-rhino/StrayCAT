@@ -364,6 +364,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label_Vendor_ID)
         Me.Controls.Add(Me.TextBox_Vendor_ID)
         Me.Controls.Add(Me.Button_Close)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Name = "Form1"
         Me.Text = "StrayCAT ESI Tool"
         CType(Me.DataGridView_In, System.ComponentModel.ISupportInitialize).EndInit()

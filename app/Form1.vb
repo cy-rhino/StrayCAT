@@ -9,7 +9,7 @@
 '
 
 Public Class Form1
-    Private typeTable As New DataTable("typeTable")
+    Private ReadOnly typeTable As New DataTable("typeTable")
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -357,7 +357,8 @@ Public Class Form1
         swGImgFile.WriteLine(TextBox_Group_Image.Text)
         swGImgFile.Close()
 
-        Dim swHeaderFile As New System.IO.StreamWriter("StrayCAT_Custom.h", False, System.Text.Encoding.GetEncoding("shift-jis"))
+        Dim enc As System.Text.Encoding = New System.Text.UTF8Encoding(False)
+        Dim swHeaderFile As New System.IO.StreamWriter("StrayCAT_Custom.h", False, enc)
         swHeaderFile.WriteLine("/*")
         swHeaderFile.WriteLine(" *  Header file for EasyCAT library")
         swHeaderFile.WriteLine(" *")
