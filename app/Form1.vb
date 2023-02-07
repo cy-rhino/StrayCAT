@@ -1,4 +1,4 @@
-﻿'
+'
 ' StrayCAT ESI Tool
 '
 ' Copyright (c) 2022 Keizo Yoshikawa
@@ -109,7 +109,9 @@ Public Class Form1
         Dim CUST_BYTE_NUM_OUT As Integer = 0
         Dim CUST_BYTE_NUM_IN As Integer = 0
 
-        Dim swIniFile As New System.IO.StreamWriter("StrayCAT_ESI_Tool.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
+        Dim enc As System.Text.Encoding = New System.Text.UTF8Encoding(False)
+
+        Dim swIniFile As New System.IO.StreamWriter("StrayCAT_ESI_Tool.ini", False, enc)
         swIniFile.WriteLine(TextBox_Vendor_ID.Text)
         swIniFile.WriteLine(TextBox_Vendor_Name.Text)
         swIniFile.WriteLine(TextBox_Product_Code.Text)
@@ -141,7 +143,7 @@ Public Class Form1
         swIniFile.WriteLine("<!-- END -->")
         swIniFile.Close()
 
-        Dim swXmlFile As New System.IO.StreamWriter("StrayCAT.xml", False, System.Text.Encoding.GetEncoding("UTF-8"))
+        Dim swXmlFile As New System.IO.StreamWriter("StrayCAT.xml", False, enc)
         swXmlFile.WriteLine("<?xml version=""1.0"" encoding=""utf-8""?>")
         swXmlFile.WriteLine("<EtherCATInfo xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:noNamespaceSchemaLocation=""EtherCATInfo.xsd"" Version=""1.6"">")
         swXmlFile.WriteLine("   <Vendor>")
@@ -346,18 +348,17 @@ Public Class Form1
         swXmlFile.WriteLine("           </Device>")
         swXmlFile.WriteLine("       </Devices>")
         swXmlFile.WriteLine("   </Descriptions>")
-        swXmlFile.Write("</EtherCATInfo>")
+        swXmlFile.WriteLine("</EtherCATInfo>")
         swXmlFile.Close()
 
-        Dim swVImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Vendor_Image.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
+        Dim swVImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Vendor_Image.ini", False, enc)
         swVImgFile.WriteLine(TextBox_Vendor_Image.Text)
         swVImgFile.Close()
 
-        Dim swGImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Group_Image.ini", False, System.Text.Encoding.GetEncoding("UTF-8"))
+        Dim swGImgFile As New System.IO.StreamWriter("StrayCAT_ESI_Group_Image.ini", False, enc)
         swGImgFile.WriteLine(TextBox_Group_Image.Text)
         swGImgFile.Close()
 
-        Dim enc As System.Text.Encoding = New System.Text.UTF8Encoding(False)
         Dim swHeaderFile As New System.IO.StreamWriter("StrayCAT_Custom.h", False, enc)
         swHeaderFile.WriteLine("/*")
         swHeaderFile.WriteLine(" *  Header file for EasyCAT library")
@@ -405,7 +406,7 @@ Public Class Form1
         swHeaderFile.WriteLine("  } Cust;")
         swHeaderFile.WriteLine("} PROCBUFFER_IN;")
         swHeaderFile.WriteLine("")
-        swHeaderFile.Write("#endif")
+        swHeaderFile.WriteLine("#endif")
         swHeaderFile.Close()
     End Sub
 
