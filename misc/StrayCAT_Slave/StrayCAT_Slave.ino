@@ -71,7 +71,7 @@ void loop()
   Application();        // user applications
 }
 
-void Application ()
+void Application()
 {
   uint16_t Analog0;
   uint16_t Analog1;
