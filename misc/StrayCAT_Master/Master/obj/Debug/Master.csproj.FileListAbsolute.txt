@@ -1,0 +1,14 @@
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\bin\Debug\Master.exe.config
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\bin\Debug\Master.exe
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\bin\Debug\Master.pdb
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\bin\Debug\SOEM.dll
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\bin\Debug\SOEM.pdb
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.Form1.resources
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.Properties.Resources.resources
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.csproj.GenerateResource.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.csproj.CopyComplete
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.exe
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\Master\obj\Debug\Master.pdb

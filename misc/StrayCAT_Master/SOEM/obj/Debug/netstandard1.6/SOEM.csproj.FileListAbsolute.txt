@@ -1,0 +1,10 @@
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\bin\Debug\netstandard1.6\SOEM.deps.json
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\bin\Debug\netstandard1.6\SOEM.dll
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\bin\Debug\netstandard1.6\SOEM.pdb
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.csproj.AssemblyReference.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.AssemblyInfoInputs.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.AssemblyInfo.cs
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.csproj.CoreCompileInputs.cache
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.dll
+C:\Users\user\OneDrive\StrayCAT\StrayCAT_Master\SOEM\obj\Debug\netstandard1.6\SOEM.pdb
