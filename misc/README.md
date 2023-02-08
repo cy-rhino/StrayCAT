@@ -12,6 +12,7 @@ This repository builds on ideas and techniques devised by pioneers. I would like
 
 - Bizan Nishimura, [SOEM.NET](https://github.com/lipoyang/SOEM.NET) conceptor
 - Hernando Barragán, Arduino originator
+- AB&T, EasyCAT and the Library developer
 - RT-Labs, Open EtherCAT Society
 
 ##### Trademark
