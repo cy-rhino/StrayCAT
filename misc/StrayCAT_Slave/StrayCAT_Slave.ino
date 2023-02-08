@@ -131,7 +131,7 @@ void Application()
       EASYCAT.BufferIn.Cust.DipSwitches &= ~(1<<3);
     }
 
-    Millis = millis();                                  // each 100 mSec
+    Millis = millis();                                  // each 100mSec
     if (Millis - PreviousRamp >= 100)
     {
       PreviousRamp = Millis;
