@@ -59,36 +59,24 @@ namespace Master
                     TextBoxVol0.Text = vol[0].ToString();
                     TextBoxVol1.Text = vol[1].ToString();
 
-                    if ((dip_sw & 8) == 8)
-                    {
+                    if ((dip_sw & 8) == 8) {
                         CheckBoxS0.Checked = true;
-                    }
-                    else
-                    {
+                    } else {
                         CheckBoxS0.Checked = false;
                     }
-                    if ((dip_sw & 4) == 4)
-                    {
+                    if ((dip_sw & 4) == 4) {
                         CheckBoxS1.Checked = true;
-                    }
-                    else
-                    {
+                    } else {
                         CheckBoxS1.Checked = false;
                     }
-                    if ((dip_sw & 2) == 2)
-                    {
+                    if ((dip_sw & 2) == 2) {
                         CheckBoxS2.Checked = true;
-                    }
-                    else
-                    {
+                    } else {
                         CheckBoxS2.Checked = false;
                     }
-                    if ((dip_sw & 1) == 1)
-                    {
+                    if ((dip_sw & 1) == 1) {
                         CheckBoxS3.Checked = true;
-                    }
-                    else
-                    {
+                    } else {
                         CheckBoxS3.Checked = false;
                     }
                 }));
@@ -208,12 +196,9 @@ namespace Master
         {
             lock (m_lockobj)
             {
-                if (CheckBoxD3.Checked == true)
-                {
+                if (CheckBoxD3.Checked == true) {
                     Leds = (byte)(Leds | 0b0001);
-                }
-                else
-                {
+                } else {
                     Leds = (byte)(Leds & 0b1110);
                 }
             }
@@ -223,12 +208,9 @@ namespace Master
         {
             lock (m_lockobj)
             {
-                if (CheckBoxD2.Checked == true)
-                {
+                if (CheckBoxD2.Checked == true) {
                     Leds = (byte)(Leds | 0b0010);
-                }
-                else
-                {
+                } else {
                     Leds = (byte)(Leds & 0b1101);
                 }
             }
@@ -238,12 +220,9 @@ namespace Master
         {
             lock (m_lockobj)
             {
-                if (CheckBoxD1.Checked == true)
-                {
+                if (CheckBoxD1.Checked == true) {
                     Leds = (byte)(Leds | 0b0100);
-                }
-                else
-                {
+                } else {
                     Leds = (byte)(Leds & 0b1011);
                 }
             }
@@ -253,12 +232,9 @@ namespace Master
         {
             lock (m_lockobj)
             {
-                if (CheckBoxD0.Checked == true)
-                {
+                if (CheckBoxD0.Checked == true) {
                     Leds = (byte)(Leds | 0b1000);
-                }
-                else
-                {
+                } else {
                     Leds = (byte)(Leds & 0b0111);
                 }
             }
