@@ -3,7 +3,6 @@ This directory stores miscellaneous source code.
 
 - StrayCAT_Master  
 C# implementation software master for Windows  
-![Image](../img/StrayCAT_Master.png)
 
 - StrayCAT_Slave  
 Test sketch using Arduino based slave device
